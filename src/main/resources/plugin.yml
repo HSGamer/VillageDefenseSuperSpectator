@@ -1,0 +1,5 @@
+name: VillageDefenseSuperSpectator
+version: ${project.version}
+main: me.hsgamer.villagedefensesuperspectator.VillageDefenseSuperSpectator
+depend: [ VillageDefense ]
+authors: [ HSGamer ]
