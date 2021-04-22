@@ -5,6 +5,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import plugily.projects.villagedefense.api.event.game.VillageGameJoinAttemptEvent;
 import plugily.projects.villagedefense.api.event.game.VillageGameStartEvent;
+import plugily.projects.villagedefense.api.event.player.VillagePlayerRespawnEvent;
 import plugily.projects.villagedefense.user.User;
 
 public class GameListener implements Listener {
@@ -29,5 +30,12 @@ public class GameListener implements Listener {
                         .filter(player -> instance.getManager().isSpectator(player.getUniqueId()))
                         .map(player -> instance.getParentPlugin().getUserManager().getUser(player))
                         .forEach(user -> user.getPlayer().setHealth(0)), 10);
+    }
+
+    @EventHandler
+    public void onRespawn(VillagePlayerRespawnEvent event) {
+        if (instance.getManager().isSpectator(event.getPlayer().getUniqueId())) {
+            event.setCancelled(true);
+        }
     }
 }
