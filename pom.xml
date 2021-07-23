@@ -88,18 +88,18 @@
         <dependency>
             <groupId>plugily.projects</groupId>
             <artifactId>villagedefense</artifactId>
-            <version>4.5.9</version>
+            <version>4.5.9-dev28</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>me.HSGamer</groupId>
             <artifactId>HSCore-bukkit-utils</artifactId>
-            <version>3.3</version>
+            <version>3.7</version>
         </dependency>
         <dependency>
             <groupId>me.HSGamer</groupId>
             <artifactId>HSCore-bukkit-baseplugin</artifactId>
-            <version>3.3</version>
+            <version>3.7</version>
         </dependency>
     </dependencies>
 </project>
